@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Registro de Estudiantes</title>
+</head>
+<body>
+  <form action="/validar" method="post" id="registroForm">
+    <label for="carrera">Carrera:</label>
+    <select id="carrera" name="carrera">
+      <option value="analisisSistemas">Análisis de Sistemas</option>
+      <option value="produccionAgraria">Producción Agraria</option>
+    </select>
+    <label for="nombres">Nombres y Apellidos:</label>
+    <input type="text" id="nombres" name="nombres" required>
+    <label for="dni">Número de DNI:</label>
+    <input type="text" id="dni" name="dni" required>
+    <label for="fechaNacimiento">Fecha de Nacimiento (dd/mm/aaaa):</label>
+    <input type="text" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa" required>
+    <label for="correo">Correo Institucional:</label>
+    <input type="email" id="correo" name="correo" required>
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required minlength="6" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]+$">
+    <input type="checkbox" onclick="mostrarContrasena()"> Mostrar Contraseña
+    <label for="aceptarCondiciones">Aceptar los Términos y Condiciones:</label>
+    <input type="checkbox" id="aceptarCondiciones" name="aceptarCondiciones" required>
+    <button type="submit" disabled>Registrarse</button>
+  </form>
+  <script src="/js/script.js"></script>
+</body>
+</html>
